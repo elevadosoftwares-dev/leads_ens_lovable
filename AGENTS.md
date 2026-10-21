@@ -1,0 +1,2 @@
+- Certifications belong directly to companies; do not expose a Site module or Site navigation because it is outside the product workflow.
+- Stack: TanStack Start (React + Node server functions) with SQL Server via `mssql`. Server-only code lives in `src/server/*.server.ts` and is loaded with `await import(...)` inside server functions; schema changes go in `database/schema.sql` and must stay idempotent.
