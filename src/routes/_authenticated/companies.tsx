@@ -15,7 +15,10 @@ export const Route = createFileRoute("/_authenticated/companies")({
       { title: "Companies — ENS Certification Tracker" },
       { name: "description", content: "Manage companies and review their certification totals." },
       { property: "og:title", content: "Companies — ENS Certification Tracker" },
-      { property: "og:description", content: "Manage companies and review their certification totals." },
+      {
+        property: "og:description",
+        content: "Manage companies and review their certification totals.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -136,9 +139,7 @@ function CompaniesPage() {
                       c.name
                     )}
                   </td>
-                  <td className="px-4 py-3">
-                    {certs.filter((x) => x.company_id === c.id).length}
-                  </td>
+                  <td className="px-4 py-3">{certs.filter((x) => x.company_id === c.id).length}</td>
                   <td className="px-4 py-3">
                     <div className="flex justify-end gap-2">
                       {editingId === c.id ? (
@@ -146,11 +147,7 @@ function CompaniesPage() {
                           <Button size="sm" onClick={() => update.mutate()}>
                             <Check className="size-4" />
                           </Button>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            onClick={() => setEditingId(null)}
-                          >
+                          <Button size="sm" variant="outline" onClick={() => setEditingId(null)}>
                             <X className="size-4" />
                           </Button>
                         </>

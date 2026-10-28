@@ -7,9 +7,15 @@ export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
       { title: "Dashboard — ENS Certification Tracker" },
-      { name: "description", content: "Review certification totals, upcoming expiries, and overdue records." },
+      {
+        name: "description",
+        content: "Review certification totals, upcoming expiries, and overdue records.",
+      },
       { property: "og:title", content: "Dashboard — ENS Certification Tracker" },
-      { property: "og:description", content: "Review certification totals, upcoming expiries, and overdue records." },
+      {
+        property: "og:description",
+        content: "Review certification totals, upcoming expiries, and overdue records.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -72,7 +78,12 @@ function Dashboard() {
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Stat label="Companies" value={companies.length} icon={Building2} tone="success" />
         <Stat label="Certifications" value={certs.length} icon={BookMarked} tone="primary" />
-        <Stat label="Expiring in 2 months" value={soon.length} icon={CalendarClock} tone="warning" />
+        <Stat
+          label="Expiring in 2 months"
+          value={soon.length}
+          icon={CalendarClock}
+          tone="warning"
+        />
         <Stat label="Expired" value={expired.length} icon={AlertTriangle} tone="destructive" />
       </div>
 

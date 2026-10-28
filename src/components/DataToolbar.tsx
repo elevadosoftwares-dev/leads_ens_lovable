@@ -72,11 +72,7 @@ export function Pagination({
         <span className="rounded-md bg-secondary px-3 py-1 font-semibold text-secondary-foreground">
           {page}
         </span>
-        <button
-          className={btn}
-          onClick={() => onPageChange(page + 1)}
-          disabled={page >= pageCount}
-        >
+        <button className={btn} onClick={() => onPageChange(page + 1)} disabled={page >= pageCount}>
           Next
         </button>
         <button

@@ -14,9 +14,15 @@ export const Route = createFileRoute("/_authenticated/certifications/")({
   head: () => ({
     meta: [
       { title: "Certifications — ENS Certification Tracker" },
-      { name: "description", content: "View, filter, update, and export company certification records." },
+      {
+        name: "description",
+        content: "View, filter, update, and export company certification records.",
+      },
       { property: "og:title", content: "Certifications — ENS Certification Tracker" },
-      { property: "og:description", content: "View, filter, update, and export company certification records." },
+      {
+        property: "og:description",
+        content: "View, filter, update, and export company certification records.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -227,7 +233,7 @@ function CertificationsPage() {
                   return (
                     <tr
                       key={c.id}
-                       className={`border-t border-border transition-colors ${rowTone(c.expiry_date, twiceReminded)}`}
+                      className={`border-t border-border transition-colors ${rowTone(c.expiry_date, twiceReminded)}`}
                     >
                       <td className="px-4 py-3">{(current - 1) * pageSize + i + 1}</td>
                       <td className="px-4 py-3">{companyById.get(c.company_id)?.name ?? "—"}</td>

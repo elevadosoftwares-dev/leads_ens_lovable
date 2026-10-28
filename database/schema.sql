@@ -2,7 +2,7 @@
 -- Applied automatically when the app first connects (src/server/db.server.ts), after creating
 -- the database if needed. Safe to re-run: every object is created only if it does not exist.
 -- Separate batches with a line containing only GO. To apply by hand:
---   sqlcmd -S <server> -U <user> -P <password> -d leads_ens -i database/schema.sql
+--   sqlcmd -S <server> -U <user> -P <password> -d new_leads_ens -i database/schema.sql
 
 SET NOCOUNT ON;
 

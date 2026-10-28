@@ -41,20 +41,20 @@ src/components/*                (server functions: run on      (DB pool, passwor
 
 ## Files
 
-| File                                       | Purpose                                                       |
-| ------------------------------------------ | ------------------------------------------------------------- |
-| `database/schema.sql`                      | SQL Server tables; applied automatically at startup           |
-| `src/server/db.server.ts`                  | Parses `DATABASE_URL`, connection pool, creates DB + schema   |
-| `src/server/crypto.server.ts`              | Password hashing (scrypt), session tokens                     |
-| `src/server/auth.server.ts`                | Create / read / destroy login sessions                        |
-| `src/lib/auth-middleware.ts`               | `requireAuth` / `requireAdmin` guards for server functions    |
-| `src/lib/auth.functions.ts`                | Sign in/out, current session, first-administrator setup       |
-| `src/lib/users.functions.ts`               | List users/roles; admin create, change role, delete           |
-| `src/lib/companies.functions.ts`           | Companies: list, add, rename, delete                          |
-| `src/lib/certifications.functions.ts`      | Certifications: list, get, save (with upload), delete         |
-| `src/routes/api/documents/$id.ts`          | Download/view a certification's document                      |
-| `src/lib/queries.ts`, `src/lib/session.tsx`| React Query hooks used by the pages                           |
-| `src/routes/`                              | Pages: `/auth`, `/dashboard`, `/companies`, `/certifications`, `/users` |
+| File                                        | Purpose                                                                 |
+| ------------------------------------------- | ----------------------------------------------------------------------- |
+| `database/schema.sql`                       | SQL Server tables; applied automatically at startup                     |
+| `src/server/db.server.ts`                   | Parses `DATABASE_URL`, connection pool, creates DB + schema             |
+| `src/server/crypto.server.ts`               | Password hashing (scrypt), session tokens                               |
+| `src/server/auth.server.ts`                 | Create / read / destroy login sessions                                  |
+| `src/lib/auth-middleware.ts`                | `requireAuth` / `requireAdmin` guards for server functions              |
+| `src/lib/auth.functions.ts`                 | Sign in/out, current session, first-administrator setup                 |
+| `src/lib/users.functions.ts`                | List users/roles; admin create, change role, delete                     |
+| `src/lib/companies.functions.ts`            | Companies: list, add, rename, delete                                    |
+| `src/lib/certifications.functions.ts`       | Certifications: list, get, save (with upload), delete                   |
+| `src/routes/api/documents/$id.ts`           | Download/view a certification's document                                |
+| `src/lib/queries.ts`, `src/lib/session.tsx` | React Query hooks used by the pages                                     |
+| `src/routes/`                               | Pages: `/auth`, `/dashboard`, `/companies`, `/certifications`, `/users` |
 
 ## Configuration (`.env`)
 
